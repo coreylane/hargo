@@ -167,7 +167,7 @@
         {{ end }}
       </div>
       {{ range first 6 (where site.RegularPages "Type" "products") }}
-      <div class="col-lg-4 col-sm-6 mb-4">
+      <div class="col">
         <div class="card border-0 text-center">
           <a href="{{ .Permalink }}">
             {{ range first 1 .Params.Images }}
@@ -179,7 +179,7 @@
             <p>{{ .Params.Description }}</p>
             <div class="mb-4">
               <span class="lead text-primary">${{ .Params.Price }}</span>
-              <s>${{ .Params.PriceBefore }}</s>
+              <!-- <s>${{ .Params.PriceBefore }}</s> -->
             </div>
             <button class="snipcart-add-item btn btn-sm btn-outline-primary" data-item-id="{{ .Params.ProductID }}"
               data-item-name="{{ .Title }}" {{ range first 1 .Params.Images }} data-item-image="{{ .image | absURL }}"

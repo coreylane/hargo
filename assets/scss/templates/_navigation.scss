@@ -1,6 +1,6 @@
 .navigation {
   transition: .3s ease;
-  background: $white;
+  background: #FBF3DE;
   @include desktop {
     border-bottom: 1px solid $border-color;
     .navbar{
@@ -88,7 +88,8 @@
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: $text-color;
+  color: #FFA5A5;
+  font-weight: bold;
 
   &:hover {
     color: $primary-color;

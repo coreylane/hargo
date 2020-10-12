@@ -7,9 +7,9 @@
     <div class="row">
       <div class="col-lg-5 mb-4 mb-lg-0">
         <!-- product image slider -->
-          {{ range .Params.Images }}
-            <img class="img-fluidw-100" src="{{ .image | absURL }}" alt="product-img">
-          {{ end }}
+
+            <img class="w-100" src="{{ .image | absURL }}" alt="product image">
+
       </div>
       <div class="col-lg-5 offset-lg-1">
         <h4 class="font-weight-medium">{{ .Title }}</h4>
@@ -19,9 +19,9 @@
         {{ end }}
         <div class="my-4">
           <span class="lead text-primary font-weight-medium">${{ .Params.Price }}</span>
-          <s>{{ .Params.PriceBefore }}</s>
+          <!-- <s>${{ .Params.PriceBefore }}</s> -->
         </div>
-        <h5>Short Description Test</h5>
+        <h5>Short Description</h5>
         <p>{{ .Params.ShortDescription | markdownify }}</p>
         <button class="snipcart-add-item btn btn-primary" data-item-id="{{ .Params.ProductID }}"
           data-item-name="{{ .Title }}" {{ range first 1 .Params.Images }} data-item-image="{{ .image | absURL }}"
